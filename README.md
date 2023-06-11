@@ -1,6 +1,6 @@
 # rothova-dane-ucetnictvi
 
-Single page website using HTML5, SCSS, and Javascript.
+One-page website using HTML5, SCSS, and Javascript.
 
 ## Prerequisites
 
@@ -32,3 +32,5 @@ npm install
 ```
 gulp
 ```
+
+This site was built using [GitHub Pages](https://mhrabovska-vccp.github.io/rothova-dane-ucetnictvi).
