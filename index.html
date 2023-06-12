@@ -110,8 +110,8 @@
     </section>
     <!-- end of services section -->
 
-     <!-- about section -->
-     <section id="about" class="about">
+     <!-- features section -->
+     <section id="features" class="about">
       <div class="container">
         <div class="row">
           <div class="about-right">
@@ -151,7 +151,7 @@
         </div>
       </div>
     </section>
-    <!-- end of about section -->
+    <!-- end of features section -->
 
     <!-- testimonial section -->
     <section id="testimonial" class="testimonial">
@@ -205,10 +205,16 @@
         <div class="row">
           <div class="contact-left">
             <h2>Napište nám</h2>
-            <form>
-              <input type="text" class="form-control" placeholder="Jméno a příjmení">
-              <input type="email" class="form-control" placeholder="E-mail">
-              <textarea placeholder="Zpráva" rows = "6"></textarea>
+            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}" method="post">
+              <fieldset id="fs-frm-inputs" class="form">
+                <label for="full-name">Jméno a příjmení</label>
+                <input type="text" class="form-control" name="name" id="full-name" placeholder="" required="false">
+                <label for="email-address">E-mail</label>
+                <input type="email" class="form-control" name="_replyto" id="email-address" placeholder="" required="true">
+                <label for="message">Zpráva</label>
+                <textarea rows="6" name="message" id="message" placeholder="" required=""></textarea>
+                <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+              </fieldset>
               <button type="submit" class="submit-btn">Odeslat</button>
             </form>
           </div>
