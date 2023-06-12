@@ -37,6 +37,8 @@ const swiper = new Swiper('.swiper', {
     },
   });
 
+  AOS.init();
+
 });
 
 // Replace the normal space after a single letter word with a non-breaking space

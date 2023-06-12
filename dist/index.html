@@ -7,19 +7,12 @@
     <link rel="icon" type="image/x-icon" href="img/jana-rothova-logo.ico">
     <meta name="description" content="Daně a účetnictví Ing. Jana Róthová">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- font awesome cdn -->
     <script src="https://kit.fontawesome.com/1e220af06c.js" crossorigin="anonymous"></script>
-    <!-- font -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu&subset=latin,latin-ext">
-    <!-- animate css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- custom (main) css -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.min.css">
-    <link rel="stylesheet"type="text/css" href="https://unpkg.com/aos@next/dist/aos.css">
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-/>
   </head>
   <body>
     
@@ -48,9 +41,6 @@
                 <a href="#services" class="nav-link">služby</a>
               </li>
               <li class="nav-item">
-                <a href="#testimonial" class="nav-link">klienti</a>
-              </li>
-              <li class="nav-item">
                 <a href="#contact" class="nav-link">kontakt</a>
               </li>
             </ul>
@@ -59,8 +49,8 @@
       </nav>
 
       <div id="intro" class="hero-div center container">
-        <h1>Daně&nbsp;a účetnictví:<br>Naše starost, váš klid</h1>
-        <p class="animate__animated animate__fadeInUp animate__slow">Daňový poradce Ing.&nbsp;Jana Róthová</p>
+        <h1>Daně a účetnictví:<br>Naše starost, váš klid</h1>
+        <p class="animate__animated animate__fadeInUp animate__slow">Daňový poradce Ing. Jana Róthová</p>
 
         <div class="hero-btns animate__animated animate__fadeInUp animate__slow">
           <a href="#services"><button type="button" class="btn-trans">služby</button></a>
@@ -74,10 +64,10 @@
     <section id="about" class="about">
       <div class="container">
         <div class="row">
-          <div data-aos="fade-up" class="about-left wow animate__animated animate__fadeInUp animate__slow">
+          <div class="about-left aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
             <img src = "img/working-woman.png" alt = "">
           </div>
-          <div class="about-left wow animate__animated animate__fadeInUp animate__slow">
+          <div class="about-left code--left aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
             <div class="title">
               <h2>Ing. Jana Róthová</h2>
               <h3>Daňový poradce ev.č. 2486, člen Komory daňových poradců ČR</h3>
@@ -93,7 +83,7 @@
     <section id="services" class="services">
       <div class="container">
         <div class="row">
-          <div class="services-item animate__animated animate__fadeInLeft animate__slow">
+          <div class="services-item aos-init aos-animate" data-aos="fade-right" data-aos-duration="1000" >
             <span><i class="fa-solid fa-receipt"></i></span>
             <h2>Vedení účetnictví</h2>
             <div class="line"></div>
@@ -101,7 +91,7 @@
             </p>
           </div>
 
-          <div class="services-item animate__animated animate__fadeInUp animate__slow">
+          <div class="services-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" >
             <span><i class="fa-solid fa-calculator"></i></span>
             <h2>Daňové poradenství</h2>
             <div class="line"></div>
@@ -109,7 +99,7 @@
             Fyzickým osobám nabízíme odborné služby, jako je příprava daňových přiznání, poradenství při uplatňování slev a odpočtů, optimalizace daňových povinností a řešení daňových problémů.</p>
           </div>
 
-          <div data-aos="fade-right" class="services-item animate__animated animate__fadeInRight animate__slow">
+          <div class="services-item aos-init aos-animate" data-aos="fade-left" data-aos-duration="1000" >
             <span><i class="fa-solid fa-briefcase"></i></span>
             <h2>Zpracování mezd</h2>
             <div class="line"></div>
@@ -124,8 +114,8 @@
      <section id="about" class="about">
       <div class="container">
         <div class="row">
-          <div class="about-right wow animate__animated animate__fadeInUp animate__slow">
-            <div class="about-item">
+          <div class="about-right">
+            <div class="about-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
               <span><i class="fas fa-handshake"></i></span>
               <div>
                 <h3>Osobní přístup</h3>
@@ -133,7 +123,7 @@
               </div>
             </div>
 
-            <div class="about-item">
+            <div class="about-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
               <span><i class="fas fa-piggy-bank"></i></span>
               <div>
                 <h3>Řešení na míru</h3>
@@ -142,15 +132,15 @@
             </div>
           </div>
 
-          <div class="about-right animate__animated animate__fadeInUp animate__slow">
-            <div class="about-item">
+          <div class="about-left">
+            <div class="about-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
               <span><i class="fas fa-user-shield"></i></span>
               <div>
                 <h3>Jistota a bezpečí</h3>
                 <p class="text">Za poskytované služby ručíme prostřednictvím pojistné smlouvy uzavřené se společností Kooperativa pojišťovna a.s. ve spolupráci s Komorou daňových poradců České republiky (KDP ČR). Tato smlouva slouží jako záruka, která chrání naše klienty v případě případných nedorozumění či nesrovnalostí.</p>
               </div>
             </div>
-            <div class="about-item">
+            <div class="about-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
               <span><i class="fas fa-hands-holding-circle"></i></span>
               <div>
                 <h3>Ochrana osobních údajů</h3>
@@ -167,11 +157,9 @@
     <section id="testimonial" class="testimonial">
       <div class="container">
 
-        <div class="row animate__animated animate__fadeInUp animate__slow">
+        <div class="row">
           <div class="swiper">
-            <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
-              <!-- Slides -->
               <div class="swiper-slide">
                 <div class="testimonial-item">
                   <div class="testimonial-img">
@@ -210,11 +198,11 @@
     <section id="contact" class="contact">
       <div class="container">
         <div class="title">
-          <h2 class="animate__animated animate__bounceIn animate__slow">Kontaktujte nás</h2>
+          <h2 class="aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1000">Kontaktujte nás</h2>
           <p class="text">Začínáte podnikat? Domluvte si s námi konzultaci, abyste získali informace o nejvhodnější formě podnikání, povinnostech jako identifikovaná osoba a plátce DPH. Naše konzultace vám pomůže nastavit pevný základ pro úspěšný start vašeho podnikání a poskytne odpovědi na vaše otázky.</p>
         </div>
 
-        <div class="row animate__animated animate__fadeInUp animate__slow">
+        <div class="row">
           <div class="contact-left">
             <h2>Napište nám</h2>
             <form>
@@ -259,5 +247,6 @@
     <!-- js -->
     <script src="js/app.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
 </html>
