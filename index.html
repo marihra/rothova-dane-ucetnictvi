@@ -14,11 +14,14 @@
     <!-- font -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu&subset=latin,latin-ext">
     <!-- animate css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- custom (main) css -->
     <link rel="stylesheet" type="text/css" href="css/styles.min.css">
     <link rel="stylesheet"type="text/css" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
   </head>
   <body>
     
@@ -165,44 +168,41 @@
     <!-- testimonial section -->
     <section id="testimonial" class="testimonial">
       <div class="container">
-        <div class="title">
-          <h2 class="animate__animated animate__bounceIn animate__slow">Naši klienti</h2>
-          <p class="text">Poskytujeme komplexní daňové poradenství a účetní služby živnostníkům, malým a středním firmám.</p>
-        </div>
 
-        <div class="row owl-carousel owl-theme animate__animated animate__fadeInUp animate__slow">
-          <div class="testimonial-item">
-            <div class="testimonial-img">
-              <a href="https://www.cooner.cz/" target="_blank"><img src="img/cooner-logo.png" alt="Cooner"></a>
+        <div class="row animate__animated animate__fadeInUp animate__slow">
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="testimonial-img">
+                    <a href="https://www.cooner.cz/" target="_blank"><img src="img/cooner-logo.png" alt="Cooner"></a>
+                  </div>
+                  <p>Paní Róthová je skvělá daňová poradkyně. Její profesionální přístup a odborné znalosti jsou vynikající. Spolupráce s ní je efektivní a přináší skvělé výsledky. Velmi doporučuji všem, kdo hledá spolehlivého a zkušeného daňového poradce.</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="testimonial-img">
+                    <a href="https://www.financero.cz/" target="_blank"><img src="img/financero-logo.png" alt="Financero"></a>
+                  </div>
+                  <p>Jsem velmi rád, že mám možnost spolupracovat s naší daňovou poradkyní. Její odborné znalosti a důkladný přístup byly pro nás neocenitelné. Vždy byla připravena zodpovědět naše otázky a poskytnout jasné a srozumitelné vysvětlení daňových zákonů a postupů. Navíc se projevila jako velmi spolehlivá a profesionální, dodržující všechny stanovené termíny a závazky. Její práce nejen usnadnila naše daňové plánování, ale také nám pomohla ušetřit čas a zdroje. Doporučujeme ji bez výhrad všem, kdo hledají kvalifikovanou a spolehlivou daňovou poradkyni.</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="testimonial-img">
+                    <a href="https://www.dentarko.com/" target="_blank"><img src="img/dentarko-logo.png" alt="Dentárko"></a>
+                  </div>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta doloribus necessitatibus totam alias unde sint veritatis placeat beatae maiores odio?</p>
+                </div>
+              </div>
             </div>
-            <p>Paní Róthová je skvělá daňová poradkyně. Její profesionální přístup a odborné znalosti jsou vynikající. Spolupráce s ní je efektivní a přináší skvělé výsledky. Velmi doporučuji všem, kdo hledá spolehlivého a zkušeného daňového poradce.</p>
-            <span><a href="https://www.cooner.cz/" target="_blank" style="color:#f0f0f0 !important">Cooner s.r.o.</a></span>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
-
-          <div class="testimonial-item">
-            <div class="testimonial-img">
-              <a href="https://www.financero.cz/" target="_blank"><img src="img/financero-logo.png" alt="Financero"></a>
-            </div>
-            <p>Jsem velmi rád, že mám možnost spolupracovat s naší daňovou poradkyní. Její odborné znalosti a důkladný přístup byly pro nás neocenitelné. Vždy byla připravena zodpovědět naše otázky a poskytnout jasné a srozumitelné vysvětlení daňových zákonů a postupů. Navíc se projevila jako velmi spolehlivá a profesionální, dodržující všechny stanovené termíny a závazky. Její práce nejen usnadnila naše daňové plánování, ale také nám pomohla ušetřit čas a zdroje. Doporučujeme ji bez výhrad všem, kdo hledají kvalifikovanou a spolehlivou daňovou poradkyni.</p>
-            <span><a href="https://www.financero.cz/" target="_blank" style="color:#f0f0f0 !important">Financero, s.r.o.</a></span>
-          </div>
-
-          <div class="testimonial-item">
-            <div class="testimonial-img">
-              <a href="https://www.dentarko.com/" target="_blank"><img src="img/dentarko-logo.png" alt="Dentárko"></a>
-            </div>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta doloribus necessitatibus totam alias unde sint veritatis placeat beatae maiores odio?</p>
-            <span><a href="https://www.dentarko.com/" target="_blank" style="color:#f0f0f0 !important">Dentárko s. r. o.</a></span>
-          </div>
-
-          <div class="testimonial-item">
-            <div class="testimonial-img">
-              <a href="https://www.moraviachem.cz/" target="_blank"><img src="img/moraviachem-logo.png" alt="MORAVIACHEM"></a>
-            </div>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta doloribus necessitatibus totam alias unde sint veritatis placeat beatae maiores odio?</p>
-            <span><a href="https://www.moraviachem.cz/" target="_blank" style="color:#f0f0f0 !important">MORAVIACHEM abrasives s.r.o.</a></span>
-          </div>
-
         </div>
       </div>
     </section>
@@ -260,5 +260,6 @@
 
     <!-- js -->
     <script src="js/app.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   </body>
 </html>
