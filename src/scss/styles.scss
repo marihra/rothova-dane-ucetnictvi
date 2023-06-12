@@ -383,6 +383,10 @@ $swiper-navigation-size: 30px;
   }
   
   /* contact */
+
+  .form {
+    border: none;
+  }
   
   .contact-left {
     display: flex;
@@ -414,8 +418,8 @@ $swiper-navigation-size: 30px;
     input, textarea {
       width: 100%;
       font-size: 1.1rem;
-      margin: 0.2rem 0;
-      padding: 0.8rem 0.6rem;
+      margin: 0.1rem 0 1rem 0;
+      padding: 0.6rem;
       border: none;
       border-bottom: 1.5px solid #f0f0f0;
       outline: 0;
