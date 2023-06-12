@@ -107,6 +107,7 @@ $swiper-navigation-size: 30px;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
+    background-attachment: scroll;  
   }
   
   .navbar {
