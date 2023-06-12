@@ -629,4 +629,11 @@ $transition: all 0.5s ease-in-out;
       padding-left: 4rem !important;
     }
   }
+
+  /* Show the banner if the user disables animations in the OS level */
+  @media (print), (prefers-reduced-motion: reduce) {
+    .animate__animated {
+      display: block;
+    }
+  }
   

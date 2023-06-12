@@ -14,7 +14,8 @@
   "license": "ISC",
   "dependencies": {
     "aos": "^2.3.4",
-    "gulp-cli": "^2.3.0"
+    "gulp-cli": "^2.3.0",
+    "normalize.css": "^8.0.1"
   },
   "devDependencies": {
     "browser-sync": "^2.27.11",
