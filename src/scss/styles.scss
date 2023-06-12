@@ -3,6 +3,7 @@ $white-smoke: #f0f0f0;
 $night-rider: #343434;
 $black: #191b17;
 $transition: all 0.5s ease-in-out;
+$swiper-navigation-size: 30px;
 
 :root {
   --mount-meadow: $mount-meadow;
@@ -10,6 +11,7 @@ $transition: all 0.5s ease-in-out;
   --night-rider: $night-rider;
   --black: $black;
   --transition: $transition;
+  --swiper-navigation-size: $swiper-navigation-size;
 }
   
   * {
@@ -175,7 +177,7 @@ $transition: all 0.5s ease-in-out;
   
     p {
       color: $white-smoke;
-      font-size: 1.05rem;
+      font-size: 0.95rem;
       letter-spacing: 4px;
     }
   }
@@ -341,6 +343,7 @@ $transition: all 0.5s ease-in-out;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    padding: 2rem 0 6.5rem 0;
   
     .title {
       h2 {
@@ -351,7 +354,7 @@ $transition: all 0.5s ease-in-out;
     }
   
     .row {
-      margin-top: 2rem;
+      margin-top: 0;
     }
   }
   
@@ -359,7 +362,7 @@ $transition: all 0.5s ease-in-out;
     width: 180px;
     height: auto;
     border-radius: 50%;
-    margin: 4rem auto 1rem auto;
+    margin: 1rem auto;
     padding: 0.5rem;
   }
   
@@ -367,7 +370,7 @@ $transition: all 0.5s ease-in-out;
     text-align: center;
   
     p {
-      font-size: 1.2rem;
+      font-size: 1.05rem;
       color: $white-smoke;
       line-height: 1.6;
     }
@@ -618,7 +621,7 @@ $transition: all 0.5s ease-in-out;
     }
   
     .testimonial-item p {
-      width: 60%;
+      width: 80%;
     }
   
     .contact .row {
@@ -637,3 +640,26 @@ $transition: all 0.5s ease-in-out;
     }
   }
   
+  .swiper {
+    width: 1000px;
+    height: 400px;
+  }
+
+  .swiper-slide {
+    display: flex !important;
+    align-items: center;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: $white-smoke !important;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after{
+    font-size: $swiper-navigation-size !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $white-smoke !important;
+  }

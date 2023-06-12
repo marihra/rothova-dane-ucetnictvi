@@ -22,6 +22,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+
+const swiper = new Swiper('.swiper', {
+    direction: 'horizontal',
+    loop: true,
+  
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
 });
 
 // Replace the normal space after a single letter word with a non-breaking space
@@ -39,3 +54,4 @@ for (let i = 0; i < paragraphs.length; i++) {
   const paragraph = paragraphs[i];
   paragraph.innerHTML = fixSingleLetterWords(paragraph.innerHTML);
 }
+  
