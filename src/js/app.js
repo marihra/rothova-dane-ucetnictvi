@@ -1,20 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     // navigation bar toggle
-    var navbarToggler = document.getElementById('navbar-toggler');
+    const navbarToggler = document.getElementById('navbar-toggler');
+
     navbarToggler.addEventListener('click', function() {
-        var navbarCollapse = document.querySelector('.navbar-collapse');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
         if (navbarCollapse.style.display === 'none') {
             navbarCollapse.style.display = 'block';
+            navbarToggler.classList.toggle('active');
         } else {
             navbarCollapse.style.display = 'none';
+            navbarToggler.classList.remove('active');
         }
     });
 
     // navbar bg change on scroll
     window.addEventListener('scroll', function() {
-        var pos = document.documentElement.scrollTop;
-        var navbar = document.querySelector('.navbar');
+        const pos = document.documentElement.scrollTop;
+        const navbar = document.querySelector('.navbar');
         if (pos >= 100) {
             navbar.classList.add('cng-navbar');
         } else {
