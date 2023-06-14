@@ -2,9 +2,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // navigation bar toggle
     const navbarToggler = document.getElementById('navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const navLinks = document.querySelectorAll('.navbar-nav a');  
 
     navbarToggler.addEventListener('click', function() {
-        const navbarCollapse = document.querySelector('.navbar-collapse');
         if (navbarCollapse.style.display === 'none') {
             navbarCollapse.style.display = 'block';
             navbarToggler.classList.toggle('active');
@@ -13,6 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
             navbarToggler.classList.remove('active');
         }
     });
+
+
+    navLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+        navbarCollapse.style.display = 'none';
+        navbarToggler.classList.remove('active');
+    });
+  });
 
     // navbar bg change on scroll
     window.addEventListener('scroll', function() {
