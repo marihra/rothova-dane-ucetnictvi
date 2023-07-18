@@ -49,6 +49,8 @@ const swiper = new Swiper('.swiper', {
     },
   });
 
+  swiper.appendSlide('<div class="swiper-slide">Slide 3</div>');
+
   AOS.init();
 
 });
