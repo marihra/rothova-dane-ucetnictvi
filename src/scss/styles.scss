@@ -456,8 +456,19 @@ $swiper-navigation-size: 30px;
   
     .text {
       margin: 2.6rem 0;
-      width: 60%;
     }
+
+    .phone, .email {
+      width: 200px;
+    }
+  }
+
+  .contact-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
   }
   
   .submit-btn {
@@ -545,7 +556,7 @@ $swiper-navigation-size: 30px;
     }
   
     .contact-right > div:first-child {
-      margin-top: 0;
+      // margin-top: 0;
     }
   
     .about-right {
@@ -609,6 +620,11 @@ $swiper-navigation-size: 30px;
     width: 900px;
     height: 400px;
   }
+
+  .contact-right {
+    // padding-left: 4rem !important;
+    flex-direction: row;
+  }
   
     /* navbar change */
   
@@ -658,10 +674,6 @@ $swiper-navigation-size: 30px;
   
     .contact .row {
       column-gap: 4rem;
-    }
-  
-    .contact-right {
-      padding-left: 4rem !important;
     }
   }
 
