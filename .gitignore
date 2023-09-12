@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Compiled output
+build/
+tmp/
+.tmp/
+temp/
+zip/
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Other
+.idea/
