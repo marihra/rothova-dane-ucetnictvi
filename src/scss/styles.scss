@@ -71,6 +71,7 @@ $swiper-navigation-size: 30px;
   body {
     overflow: auto;
     overscroll-behavior: none;
+    overflow-x: hidden;
   }
   
   .center {
@@ -129,7 +130,7 @@ $swiper-navigation-size: 30px;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     background-color: #fff;
     z-index: 999;
   }
@@ -464,6 +465,7 @@ $swiper-navigation-size: 30px;
     color: $white-smoke;
     padding: 0;
     height: 7vh;
+    width: 100vw;
   
     .container {
       width: 100%;
@@ -478,6 +480,12 @@ $swiper-navigation-size: 30px;
   }
   
   /* #### Media Queries #### */
+
+  @media (max-width: 767px) and (orientation: landscape) {
+    .footer {
+      height: 15vh;
+    }
+  }
   
   /* Medium devices (landscape tablets, 768px and up) */
   @media screen and (min-width: 768px) {
@@ -532,6 +540,7 @@ $swiper-navigation-size: 30px;
       opacity: 1 !important;
     }
   }
+  
   
   /* Large devices (laptops/desktops, 992px and up) */
   @media screen and (min-width: 992px) {
