@@ -49,7 +49,7 @@ const swiper = new Swiper('.swiper', {
     },
   });
 
-  swiper.appendSlide('<div class="swiper-slide">Slide 3</div>');
+  // swiper.appendSlide('<div class="swiper-slide">Slide 3</div>');
 
   AOS.init();
 
@@ -70,4 +70,14 @@ for (let i = 0; i < paragraphs.length; i++) {
   const paragraph = paragraphs[i];
   paragraph.innerHTML = fixSingleLetterWords(paragraph.innerHTML);
 }
-  
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Initialize AOS
+  AOS.init();
+
+  // Remove AOS classes after the initial animation
+  const aosElements = document.querySelectorAll('.aos-init.aos-animate');
+  aosElements.forEach(element => {
+    element.classList.remove('aos-init', 'aos-animate');
+  });
+});

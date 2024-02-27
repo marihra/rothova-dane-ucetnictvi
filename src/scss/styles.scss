@@ -67,6 +67,11 @@ $swiper-navigation-size: 30px;
   .text {
     margin: 0.6rem 0;
   }
+
+  body {
+    overflow: auto;
+    overscroll-behavior: none;
+  }
   
   .center {
     display: flex;
@@ -75,7 +80,7 @@ $swiper-navigation-size: 30px;
   }
   
   section {
-    padding: 6.5rem 0;
+    padding: 1.5rem 0;
   }
   
   .title {
@@ -96,7 +101,6 @@ $swiper-navigation-size: 30px;
   /* header */
   
   .header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.3)), url("../img/header-bg.jpg");
     min-height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -108,9 +112,17 @@ $swiper-navigation-size: 30px;
     color: #fff;
     display: flex;
     flex-direction: column;
-    // justify-content: stretch;
     height:100%;
     width:100%; 
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.3));
+    }
   }
   
   .navbar {
@@ -198,6 +210,7 @@ $swiper-navigation-size: 30px;
     flex: 1;
     flex-direction: column;
     text-align: center;
+    z-index: 100;
   
     h1 {
       font-size: 2.55rem;
@@ -210,45 +223,10 @@ $swiper-navigation-size: 30px;
       letter-spacing: 4px;
     }
   }
-  
-  .hero-btns {
-    margin-top: 2.1rem;
-  
-    button {
-      border: 3.5px solid #fff;
-      border-radius: 2rem;
-      padding: 0.8rem 2rem;
-      text-transform: uppercase;
-    }
-  }
-  
-  .btn-trans {
-    color: #fff;
-    transition: $transition;
-    display: none;
-  
-    &:hover {
-      background: $mount-meadow;
-      border-color: $mount-meadow;
-    }
-  }
-  
-  .btn-white {
-    background: #fff;
-    color: $night-rider;
-    transition: $transition;
-  
-    &:hover {
-      background: transparent;
-      color: #fff;
-    }
-  }
-  
+
   /* about */
   
   .about {
-    .row {}
-  
     .title {
       text-align: left;
     }
@@ -316,6 +294,14 @@ $swiper-navigation-size: 30px;
     margin: 1.2rem auto;
     background: $mount-meadow;
     height: 2.5px;
+  }
+
+  .row-extra {
+    padding: 1rem 0;
+    text-align: center;
+    h3 {
+      margin: 0;
+    }
   }
   
 
@@ -395,18 +381,10 @@ $swiper-navigation-size: 30px;
   
   /* contact */
 
-  .form {
-    border: none;
-  }
-  
-  .contact-left {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-
-    h2 {
-      margin-bottom: 2.5rem !important;
+  .contact {
+    .container {
+      display: flex;
+      flex-direction: column;
     }
   }
   
@@ -414,7 +392,7 @@ $swiper-navigation-size: 30px;
     margin-top: 2rem;
   
     > div {
-      margin: 2rem 0;
+      margin: 0.4rem 0;
       padding: 1rem 0;
   
       h2 {
@@ -424,99 +402,48 @@ $swiper-navigation-size: 30px;
     }
   }
   
-  .contact-left form {
-    input, textarea {
-      width: 100%;
-      font-size: 1.1rem;
-      margin: 0.1rem 0 1rem 0;
-      padding: 0.6rem;
-      border: none;
-      border-bottom: 1.5px solid #f0f0f0;
-      outline: 0;
-    }
-  
-    input::placeholder, textarea::placeholder {
-      font-size: 1.1rem;
-      font-weight: 300;
-    }
-  
-    input:focus, textarea:focus {
-      border-color: $night-rider;
-    }
-  }
-  
   .contact {
     .title {
       display: flex;
       flex-direction: column;
       justify-content: center;
       text-align: center;
-      align-items: center;
     }
   
     .text {
-      margin: 2.6rem 0;
+      margin: 0.6rem 0;
     }
 
-    .phone, .email {
+    .phone, .email, .invoice {
+      display: flex;
+      flex-direction: column;
       width: 200px;
+      a {
+        cursor: pointer;
+      }
     }
   }
 
-  .contact-right {
+  .contact-detail {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+    padding: 2rem 0;
   }
   
-  .submit-btn {
-    margin: 1rem 0;
-    border: none;
-    font-size: 1.3rem;
-    color: #fff;
-    background: $mount-meadow;
-    padding: 0.8rem 3.4rem;
-    border-radius: 2rem;
-    transition: $transition;
-  
-    &:hover {
-      background: $black;
-    }
+  .contact-detail div {
+    margin: 0.3rem 0;
+    padding: 0.4rem 0;
   }
-  
-  .contact-right div {
-    margin: 2rem 0;
-  }
-  
-  /* footer */
-  
-  .footer {
-    text-align: center;
-    background: $black;
-    color: $white-smoke;
-    padding: 2rem 4rem;
-    height: 20vh;
-  
-    .container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-    }
-  
-    .text {
-      margin-top: 0.9rem;
-    }
-  }
-  
-  .footer-links {
+
+  .socials {
     display: flex;
     justify-content: center;
   
     a {
-      color: $white-smoke;
+      color: $night-rider;
       width: 50px;
       height: 50px;
       margin: 0 0.2rem;
@@ -529,10 +456,35 @@ $swiper-navigation-size: 30px;
     }
   }
   
+  /* footer */
+  
+  .footer {
+    text-align: center;
+    background: $black;
+    color: $white-smoke;
+    padding: 0;
+    height: 7vh;
+  
+    .container {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+    }
+  
+    .text {
+      font-size: 0.9rem;
+      padding-top: 0.7rem;
+    }
+  }
+  
   /* #### Media Queries #### */
   
   /* Medium devices (landscape tablets, 768px and up) */
   @media screen and (min-width: 768px) {
+    section {
+      padding: 6.5rem 0;
+    }
+
     .services .row {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -542,21 +494,34 @@ $swiper-navigation-size: 30px;
     .services-item {
       margin: 0;
     }
+
+    .row-extra {
+      padding: 4.5rem 0 0;
+    }
   
     .testimonial-item p {
       width: 75%;
       margin-left: auto;
       margin-right: auto;
     }
-  
-    .contact .row {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 2rem;
+
+    .contact-detail {
+      flex-direction: row;
+      div {
+       padding: 0;
+      }
     }
-  
-    .contact-right > div:first-child {
-      // margin-top: 0;
+
+    .contact .text {
+      margin: 0.6rem 10rem;
+  }
+
+    .phone-and-email {
+      display: flex;
+      flex-direction: column;
+      .phone, .email {
+        padding: 0.5rem 0;
+      }
     }
   
     .about-right {
@@ -572,7 +537,7 @@ $swiper-navigation-size: 30px;
   @media screen and (min-width: 992px) {
     .navbar {
       background: transparent;
-      margin-top: 1.4rem;
+      padding: 0.3rem 0;
   
       .container {
         display: flex;
@@ -610,20 +575,10 @@ $swiper-navigation-size: 30px;
     .hero-div h1 {
       font-size: 3.6rem;
     }
-  
-    .btn-trans {
-      display: inline-block;
-      margin-right: 0.8rem;
-    }
 
   .swiper {
     width: 900px;
     height: 400px;
-  }
-
-  .contact-right {
-    // padding-left: 4rem !important;
-    flex-direction: row;
   }
   
     /* navbar change */
