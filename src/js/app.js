@@ -1,38 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // navigation bar toggle
-    const navbarToggler = document.getElementById('navbar-toggler');
-    const navbarCollapse = document.querySelector('.navbar-collapse');
-    const navLinks = document.querySelectorAll('.navbar-nav a');  
+// navigation bar toggle
+const navbarToggler = document.getElementById('navbar-toggler');
+const navbarCollapse = document.querySelector('.navbar-collapse');
+const navLinks = document.querySelectorAll('.navbar-nav a');  
 
-    navbarToggler.addEventListener('click', function() {
-        if (navbarCollapse.style.display === 'none') {
-            navbarCollapse.style.display = 'block';
-            navbarToggler.classList.toggle('active');
-        } else {
-            navbarCollapse.style.display = 'none';
-            navbarToggler.classList.remove('active');
-        }
-    });
+navbarToggler.addEventListener('click', function() {
+  navbarCollapse.classList.toggle('show');
+  navbarToggler.classList.toggle('active');
+});
 
-
-    navLinks.forEach(function(link) {
+navLinks.forEach(function(link) {
     link.addEventListener('click', function() {
-        navbarCollapse.style.display = 'none';
+        navbarCollapse.classList.remove('show');
         navbarToggler.classList.remove('active');
     });
-  });
+});
 
-    // navbar bg change on scroll
-    window.addEventListener('scroll', function() {
-        const pos = document.documentElement.scrollTop;
-        const navbar = document.querySelector('.navbar');
-        if (pos >= 100) {
-            navbar.classList.add('cng-navbar');
-        } else {
-            navbar.classList.remove('cng-navbar');
-        }
-    });
+// navbar bg change on scroll
+window.addEventListener('scroll', function() {
+    const pos = document.documentElement.scrollTop;
+    const navbar = document.querySelector('.navbar');
+    if (pos >= 100) {
+        navbar.classList.add('cng-navbar');
+    } else {
+        navbar.classList.remove('cng-navbar');
+    }
+});
 
 
 const swiper = new Swiper('.swiper', {

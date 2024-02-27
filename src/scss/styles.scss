@@ -181,6 +181,10 @@ $swiper-navigation-size: 30px;
     display: none;
   }
 
+  .show {
+    display: block !important;
+  }
+
 
   .bar {
     display: block;
@@ -243,7 +247,7 @@ $swiper-navigation-size: 30px;
   }
   
   .about-item {
-    margin: 1.4rem 0;
+    margin: 0;
     display: flex;
   
     div h3 {
