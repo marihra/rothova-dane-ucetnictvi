@@ -1,5 +1,6 @@
 $mount-meadow: #1bbc9c;
 $white: #ffffff;
+$smoke-white: #f9f9f9;
 $night-rider: #343434;
 $black: #191b17;
 $transition: all 0.5s ease-in-out;
@@ -8,6 +9,7 @@ $swiper-navigation-size: 30px;
 :root {
   --mount-meadow: $mount-meadow;
   --white: $white;
+  --smoke-white: $smoke-white;
   --night-rider: $night-rider;
   --black: $black;
   --transition: $transition;
@@ -296,7 +298,7 @@ $swiper-navigation-size: 30px;
   /* services */
   
   .services {
-    background: $white;
+    background: $smoke-white;
   }
   
   .services-item {
@@ -332,6 +334,7 @@ $swiper-navigation-size: 30px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 3rem 0.9rem 1.5rem;
     &>* {
       width: 100%;
     }
