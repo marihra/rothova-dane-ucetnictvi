@@ -1,5 +1,5 @@
 $mount-meadow: #1bbc9c;
-$white-smoke: #f0f0f0;
+$white: #ffffff;
 $night-rider: #343434;
 $black: #191b17;
 $transition: all 0.5s ease-in-out;
@@ -7,7 +7,7 @@ $swiper-navigation-size: 30px;
 
 :root {
   --mount-meadow: $mount-meadow;
-  --white-smoke: $white-smoke;
+  --white: $white;
   --night-rider: $night-rider;
   --black: $black;
   --transition: $transition;
@@ -71,7 +71,7 @@ $swiper-navigation-size: 30px;
   body {
     overflow: auto;
     overscroll-behavior: none;
-    overflow: hidden;
+    // overflow: hidden;
   }
   
   .center {
@@ -115,14 +115,14 @@ $swiper-navigation-size: 30px;
     flex-direction: column;
     height:100%;
     width:100%; 
-    &:before {
+    &::before {
       content: '';
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
-      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.3));
+      background: linear-gradient(180deg, rgba(0,0,0,.7) 0%, rgba(129,129,129,.6) 100%);
     }
   }
   
@@ -167,15 +167,38 @@ $swiper-navigation-size: 30px;
   
   .nav-link {
     text-transform: uppercase;
-    font-size: 0.95rem;
+    font-size: 1rem;
     letter-spacing: 1.5px;
-    font-weight: 400;
+    font-weight: 800;
     transition: $transition;
-  
-    &:hover {
-      color: $mount-meadow !important;
+    position:relative;
+    z-index: 1;
+    display: block;
+    padding: 10px;
+    &:after {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      width: 100%;
+      height: 1px;
+      content: '.';
+      color: transparent;
+      background: #1bbc9c;
+      visibility: none;
+      opacity: 0;
+      z-index: -1;
+      transition: all .5s;
     }
+    &:hover:after {
+      opacity: 1;
+      visibility: visible;
+      height: 100%;
   }
+}
   
   .navbar-collapse {
     display: none;
@@ -223,8 +246,8 @@ $swiper-navigation-size: 30px;
     }
   
     p {
-      color: $white-smoke;
-      font-size: 0.95rem;
+      color: $white;
+      font-size: 1.15rem;
       letter-spacing: 4px;
     }
   }
@@ -234,6 +257,9 @@ $swiper-navigation-size: 30px;
   .about {
     .title {
       text-align: left;
+      .text {
+        text-align: justify;
+      }
     }
   }
   
@@ -270,7 +296,7 @@ $swiper-navigation-size: 30px;
   /* services */
   
   .services {
-    background: $white-smoke;
+    background: $white;
   }
   
   .services-item {
@@ -302,13 +328,23 @@ $swiper-navigation-size: 30px;
   }
 
   .row-extra {
-    padding: 1rem 0;
-    text-align: center;
-    h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &>* {
+      width: 100%;
+    }
+    h2 {
       margin: 0;
+      text-align: center;
     }
   }
-  
+
+  strong {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 65%, rgba(26,188,156,1) 65%);
+    display: inline;
+  }  
 
   /* testimonial */
   
@@ -346,7 +382,7 @@ $swiper-navigation-size: 30px;
   
     p {
       font-size: 1.05rem;
-      color: $white-smoke;
+      color: $white;
       line-height: 1.6;
     }
   
@@ -366,7 +402,7 @@ $swiper-navigation-size: 30px;
 
   .swiper-button-next,
   .swiper-button-prev {
-    color: $white-smoke !important;
+    color: $white !important;
     opacity: 0 !important;
   }
 
@@ -381,7 +417,7 @@ $swiper-navigation-size: 30px;
   }
 
   .swiper-pagination-bullet-active {
-    background: $white-smoke !important;
+    background: $white !important;
   }
   
   /* contact */
@@ -466,7 +502,7 @@ $swiper-navigation-size: 30px;
   .footer {
     text-align: center;
     background: $black;
-    color: $white-smoke;
+    color: $white;
     padding: 0;
     height: 7vh;
     width: 100vw;
@@ -508,7 +544,7 @@ $swiper-navigation-size: 30px;
     }
 
     .row-extra {
-      padding: 4.5rem 0 0;
+      padding: 6.5rem 0 0;
     }
   
     .testimonial-item p {
@@ -560,7 +596,7 @@ $swiper-navigation-size: 30px;
     }
   
     .navbar-brand {
-      color: $white-smoke;
+      color: $white;
       font-size: 2rem;
     }
   
@@ -582,7 +618,7 @@ $swiper-navigation-size: 30px;
     }
   
     .nav-link {
-      color: $white-smoke;
+      color: $white;
     }
   
     .hero-div h1 {
