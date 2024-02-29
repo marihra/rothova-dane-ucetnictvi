@@ -71,9 +71,8 @@ $swiper-navigation-size: 30px;
   }
 
   body {
-    overflow: auto;
     overscroll-behavior: none;
-    // overflow: hidden;
+    overflow: auto;
   }
   
   .center {
@@ -277,7 +276,8 @@ $swiper-navigation-size: 30px;
   .about-item {
     margin: 0;
     display: flex;
-  
+    padding-top: 1.5rem;
+
     div h3 {
       margin-top: 0;
       font-size: 1.4rem;
@@ -334,7 +334,7 @@ $swiper-navigation-size: 30px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 3rem 0.9rem 1.5rem;
+    padding: 2rem 0;
     &>* {
       width: 100%;
     }
@@ -540,6 +540,10 @@ $swiper-navigation-size: 30px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
+    }
+
+    #features {
+      padding-top: 5.1rem;
     }
   
     .services-item {

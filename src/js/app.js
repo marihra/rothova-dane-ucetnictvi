@@ -58,12 +58,19 @@ function fixSingleLetterWords(text) {
     return fixedText;
   }
 
-// Apply the function to <p> elements
-const paragraphs = document.getElementsByTagName('p');
-for (let i = 0; i < paragraphs.length; i++) {
-  const paragraph = paragraphs[i];
-  paragraph.innerHTML = fixSingleLetterWords(paragraph.innerHTML);
-}
+  function applyFixToElements(tagName) {
+    const elements = document.getElementsByTagName(tagName);
+    for (let i = 0; i < elements.length; i++) {
+      const element = elements[i];
+      element.innerHTML = fixSingleLetterWords(element.innerHTML);
+    }
+  }
+  
+  // Apply the function to <p> elements
+  applyFixToElements('p');
+  
+  // Apply the function to <h2> elements
+  applyFixToElements('h2');
 
 document.addEventListener("DOMContentLoaded", function() {
   // Initialize AOS
